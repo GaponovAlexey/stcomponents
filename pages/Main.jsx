@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Button } from './Button'
-import { Console } from './components/Console'
+import { Console } from './Console'
 import { Flex } from './Flex'
 import { Title } from './Title'
 
