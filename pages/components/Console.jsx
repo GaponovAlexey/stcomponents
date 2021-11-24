@@ -10,10 +10,11 @@ const StyledConsole = styled.textarea`
   font-size: 24px;
   border: none;
   resize: nine;
-  color: ${({ color }) => color || 'white'};
+  color: ${(props) => props.color || props.theme.colors.primary};
   &:focus {
     outline: none;
   }
+
 `
 
 export const Console = ({ color, ...props }) => {

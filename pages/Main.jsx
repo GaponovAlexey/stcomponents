@@ -19,7 +19,7 @@ export const Main = () => {
         <Title color={'green'}>console cmd 2021.Ulbi TV</Title>
       </Flex>
       <Flex direction='column' margin={'10px 0'} >
-        <Console color='green' />
+        <Console  />
         <Button primary background='black'  color={'green'}  >Send</Button>
       </Flex>
     </AppWraper>
