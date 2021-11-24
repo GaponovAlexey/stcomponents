@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const Foot = styled.div`
 display: flex;
-// flex-direction: 'row'};
-// align-items: 'center'};
+flex-direction: 'row'};
+align-items: 'center'};
 justify-content: 'space-between'};
 `
 

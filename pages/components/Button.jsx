@@ -1,23 +1,44 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 
-const StyledButton = styled.button`
-border: none;
-padding: 10px 15px;
-font-size: 18px;
-cursor: pointer;
-&: focus {
-  outline: none
+const rotateAnimation = keyframes`
+0% {
+  transform: rotateZ(0deg);
 }
-align-self: flex-end;
-${props => props.primary && css ` 
-color: ${props => props.color || 'white'};
-background: ${props => props.background || 'white'};
-` }
+100% {
+  transform: rotateZ(360deg);
+}
+`
+
+const StyledButton = styled.button.attrs(props => ({
+  outlined: true
+}))`
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  &: focus {
+    outline: none;
+  }
+  &: hover {
+    animation: ${rotateAnimation} 1s infinite linear;
+  }
+  &:hover {
+    background: red; 
+   } 
+  align-self: flex-end;
+  ${(props) =>
+    props.primary &&
+    css`
+      color: ${(props) => props.color || 'white'};
+      background: ${(props) => props.background || 'white'};
+    `}
+`
+
+const LargeButton = styled(StyledButton)`
+  font-size: 32px;
 `
 
 export const Button = (props) => {
-  return (
-    <StyledButton  {...props} />
-  )
+  return <LargeButton {...props} />
 }

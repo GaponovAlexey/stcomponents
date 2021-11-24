@@ -18,8 +18,8 @@ export const Main = () => {
       <Flex justify='center'>
         <Title color={'green'}>console cmd 2021.Ulbi TV</Title>
       </Flex>
-      <Flex direction='column' >
-        <Console  />
+      <Flex direction='column' margin={'10px 0'} >
+        <Console color='green' />
         <Button primary background='black'  color={'green'}  >Send</Button>
       </Flex>
     </AppWraper>
