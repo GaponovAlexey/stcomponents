@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button } from './components/Button'
+import { Button } from './Button'
 import { Console } from './components/Console'
-import { Flex } from './components/Flex'
-import { Title } from './components/Title'
+import { Flex } from './Flex'
+import { Title } from './Title'
 
 const AppWraper = styled.div`
   width: 100%;

@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import { Footer } from './components/Footer'
+import { Footer } from './Footer'
 import { Main } from './Main'
 
 const Global = createGlobalStyle`
