@@ -9,6 +9,7 @@ const Foot = styled.div`
   justify-content: end;
 `
 
+
 export const Footer = () => {
   return (
     <Foot>
