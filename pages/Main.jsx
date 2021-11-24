@@ -12,6 +12,7 @@ const AppWraper = styled.div`
   background: black;
 `
 
+
 export const Main = () => {
   return (
     <AppWraper>
