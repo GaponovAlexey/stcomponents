@@ -1,14 +1,9 @@
 {
-  "name": "stcomponents",
-  "homepage": "https://kekelberi.github.io/stcomponents",
-  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "next start"
   },
   "dependencies": {
     "next": "latest",
