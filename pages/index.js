@@ -1,45 +1,34 @@
 import Head from 'next/head'
-import styled, { keyframes } from 'styled-components'
-import { Footer } from './base/Footer'
-import { Header } from './base/Header'
-import MyApp from './_app'
+import { createGlobalStyle } from 'styled-components'
+import { Footer } from './components/Footer'
+import { Main } from './Main'
+
+const Global = createGlobalStyle`
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas;
+}
+.head {
+  color: red;
+}
+`
 
 export default function Home() {
-  const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
-  const Rotate = styled.div`
-    display: inline-block;
-    animation: ${rotate} 2s linear infinite;
-    font-size: 1.2rem;
-  `
-  const Title = styled.h1`
-    font-size: 1.5em;
-    text-align: center;
-    color: palevioletred;
-  `
-
-  // Create a Wrapper component that'll render a <section> tag with some styles
-  const Wrapper = styled.section`
-    padding: 4em;
-    background: papayawhip;
-  `
   return (
     <div>
-        <Header />
-      <div className='content'>
-        <Wrapper>
-          <Rotate>Hello World!</Rotate>
-        </Wrapper>
+      <Global />
+      <Head>
+        <title>styled-components</title>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <meta name='robots' content='all' />
+        <p className='head'> hello from Header</p>
+      </Head>
+      <div>
+        <Main />
       </div>
-        <Footer />
+      <Footer />
     </div>
   )
 }
